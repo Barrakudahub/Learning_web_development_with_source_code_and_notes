@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Audio Video Organizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: burlywood;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header nav a {
+            color: black;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            background-color: beige;
+            padding: 20px;
+        }
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .media-container > div {
+            background-color: black;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#general">General</a>
+        <a href="#audio">Audio</a>
+        <a href="#video">Video</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+<h2 style="text-align: center;">My audio video list</h2>
+<main>
+    <div class="media-container">
+        <div>
+            <audio controls>
+                <source src="01 WADA RAHA SANAM-KHILADI.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div>
+            <video controls width="320">
+                <source src="1.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+        <div>
+            <audio controls>
+                <source src="2 elevator-music-bossa-nova-background.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div>
+            <video controls width="320">
+                <source src="2.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+        <div>
+            <audio controls>
+                <source src="3 dancing-under-the-stars-background.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div>
+            <video controls width="320">
+                <source src="3.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
