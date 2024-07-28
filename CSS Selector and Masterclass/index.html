@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Selector and MasterClass </title>
+    <style>
+        /* Element Selector */
+        div{
+            background-color: beige;
+        }
+        /* Class Selector */
+        .brown{
+          background-color:brown;  
+        }
+        /* Id selector */
+        #black{
+            color: white;
+            background-color: black;
+        }
+        /* Child Selector */
+        div > p{
+            color: white;
+            background-color: blue;
+        }
+        /* Descendent Selector */
+        div p{
+            color: blue;
+            background-color:black;
+        } 
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding:0 ;
+        }
+        /* Pseudo Selector */
+        a:visited{
+            color:green;
+        }
+
+        a:link{
+            color: orange;
+        }
+
+        a:active{
+            background-color: red;
+        }
+
+        a:hover{
+            background-color: black;
+        }
+
+        /* p:first-child{
+            background-color: aqua;
+        } */
+    </style>
+</head>
+<body>
+    <header><h1>Learning Selectors and MasterClass in CSS</h1></header>
+    <div>I am a div</div>
+    <div class="brown">I am second div</div>
+    <div id="black">I am third div</div>
+    <div><p>I am a para inside div</p></div>
+    <div><article><p>I am a para inside div</p></article></div>
+    <div>
+        <a target="_blank" href="https://www.google.com">Open Google</a><br>
+        <a target="_blank" href="https://www.facebook.com">Open Facebook</a>
+    <!-- </div>
+    <main class="one">
+        <p>I am first child</p>
+        <p>I am second child</p>
+    </main> -->
+</body>
+</html>
