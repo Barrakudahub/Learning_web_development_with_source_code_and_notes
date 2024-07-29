@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity & Cascade Algorithm</title>
+    <style>
+        /* order of specificity 
+        Important(!important) > Inline Styles >ID selector >Classes and Attribute > Element Selector > Universal Selector */
+        h1{
+            color: bisque;
+        }
+        .cyellow{
+            color: yellow;
+            /* Important has the higest priority */
+            /* color:black !important ; */
+            background-color: antiquewhite;
+        }
+        .cred{
+            color: red;
+        }
+        .cpurple{
+            color: purple;
+        }
+        /* Attribute seletor specificity */
+        [data-x=a]{
+            background-color: antiquewhite;
+        }
+         /* cuz the specificity is = 1(h1 element) + 10(class cyellow) =11  */
+         h1.cyellow{
+            color: brown;
+         }
+    </style>
+</head>
+<body>
+   <div>
+    <h1 class="cyellow cred cpurple" data-x="a">To understand Specificity</h1>
+   </div> 
+</body>
+</html>
