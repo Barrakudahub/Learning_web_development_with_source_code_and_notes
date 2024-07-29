@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units and understanding overflow</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .box{ 
+            text-align: center;
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 1463px; */
+            width: 80vw;
+            /* only applicable to block level element eg. div  */
+            margin: auto; 
+            /* Vh stand for viewport height */
+            height: 10vh;
+            background-color: lightseagreen;
+        }
+
+        .container{
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 1463px; */
+            width: 80vw;
+            min-height: 70vh;
+            /* only applicable to block level element eg. div  */
+            margin: 20px auto; 
+            /* height: 80vh; */
+            font-size: 18px;
+            background-color: lightseagreen;          
+        }
+
+        .container p{
+            /* inherit the font size of container into the multiple of the given value */
+            /* font-size: 2em; */
+            /* inherits the font size of root element multiple */
+            /* font-size: 2rem; */
+            border: 2px solid blue;
+            width: 50%;
+
+        }
+
+        html{
+            font-size: 14px;
+        }
+
+        .mycont{
+            text-align: center;
+            border: 2px solid black;
+            width: 80vw;
+            margin: 20px auto; 
+            height: 10vh;
+            font-size: 16px;
+            background-color: lightseagreen; 
+        }
+        /* Understanding overflow */
+        .box1{
+            margin: auto;
+            border: 2px solid black;
+           /* With this parameters the overflow occurred. */
+            height: 10vh;
+            width: 80vw;
+             /* To overcome this overflow we can use */
+            overflow: scroll;
+            overflow: auto;
+            /* white-space:nowrap;
+            text-overflow: ellipsis; */
+            /* we can also change it induvidualy using x y element and with both at the same time*/
+            /* overflow-x: hidden;
+            overflow-y: ; */
+            overflow: hidden auto ;
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">This is navigation bar</div>
+    <div class="container"> <p># Body Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, inventore maiores atibus amet saepe a nisi minima beatae, est explicabo cum blanditiis, quibusdam voluptatibus.cta illo esse ipsum, commodi optio debitis quidem eos obcaecati consectetur delectus modi, obcaecati alias laboriosam facilis eos, eveniet, quas esse autem reprehenderit adipisci numquam, illum est incidunt? Laborum magni nam, eaque animi odit et, recusandae, ad dolor excepturi iusto illum ipsum nobis cum numquam sit. Dolor molestias eligendi deleniti? Exercitationem amet nostrum sequi nam debitis vel!</p>
+    
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel nisi sunt totam doloribus sit! Expedita provident quam vel exercitationem saepe culpa a molestias dolorem! Minima, fuga tenetur unde voluptates inventore mollitia reprehenderit temporibus cum itaque corrupti quis velit dicta labore, molestias aut.</div>
+    <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro fugiat autem impedit laudantium alias facilis, eveniet eius quos vero et ex, veritatis adipisci! Repudiandae suscipit voluptas id consequuntur molestias ullam voluptate! Perspiciatis, eaque pariatur voluptas quod numquam reiciendis iusto praesentium. Saepe quia fuga at doloribus cum animi, accusantium possimus reiciendis?</div>
+    <div class="mycont">This is footer</div>
+</body>
+</html>
