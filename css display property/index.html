@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display property</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        .box{
+            border: 2px solid blue;
+            display: inline-block;
+            /* Inline element dosenot support the top sdie properties like padding and margin */
+            /* to overcome this we have to use inline-block */
+            padding: 30px;
+        }
+
+        .box1{
+            border: 2px solid blue;
+            display: inline-block;
+            padding: 30px;
+            /* remove the box and also delete the space reserved */
+            /* display: none; */
+            /* remove the box but keep the space reserved for the box */
+            /* visibility: hidden; */
+            display: inline-flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">About</div>
+
+    <div class="box">I am Hitoshi Manvatkar </div>
+    <span>and I am an IT Engineer</span>
+</body>
+</html>
