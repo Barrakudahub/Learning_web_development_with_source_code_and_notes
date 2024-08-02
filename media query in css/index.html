@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Query</title>
+    <style>
+        body{
+            background-color: darkgoldenrod;
+        }
+
+        /* @media  screen and (orientation:landscape) {
+            body{
+                border: 2px solid black;
+            }
+        } */
+        /* @media not|noly mediatype and (expression) { 
+        CSS Code ;
+         } */
+        @media only screen and (max-width: 455px){
+            body{
+                background-color: beige;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+
+        .boxes{
+            display: flex;
+        }
+
+            
+        .box{
+            margin: 3px;
+            padding: 3px;
+            width: 355px;
+            height: 355px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Hello there!! I am Hitoshi Barrakuda
+    </div>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
