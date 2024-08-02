@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in CSS</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* We can directly change the theme(including values, background,url,numbers,strings) of the website. by using the variable. */
+        /* Root consist of global variable */
+        :root{
+            --color:cyan;
+            --seccolor:rgb(155, 255, 255);
+            --defpad:30px;
+            --defop:0.5;
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            list-style-type: none;
+            /* padding: 20px; */
+            /* Variables can also hold other properties like defped(default padding). */
+            padding: var(--defpad);
+            opacity: var(--defop),0.9;
+            border: 2px solid blue;
+
+        }
+        ul li:first-child{
+            /* setting local variable by slimply overwritting the --color inside the doc */
+            --color:purple;
+            background-color: var(--color);
+        }
+        .nav{
+            background-color: var(--color);
+             /* rgb(255, 195, 105); */
+            
+        }
+        .container{
+            background-color:var(--seccolor)
+             /* blanchedalmond; */
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+        </ul>
+    </div>
+    <div class="container">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque cum sunt, asperiores numquam expedita ea? Voluptatibus voluptatum debitis accusantium cupiditate voluptate adipisci a officia, nobis vero ut enim! Mollitia nemo, eligendi deserunt facilis fuga modi, numquam voluptas aliquid est saepe quaerat impedit maiores nulla itaque?</div>
+</body>
+</html>
