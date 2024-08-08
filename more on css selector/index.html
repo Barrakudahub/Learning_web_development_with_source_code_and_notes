@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /* If box is first child of their parents. */
+        /* .box:first-child{
+            background-color: blanchedalmond;
+        } */
+
+        /* .box::first-line{
+            color: aliceblue;
+            background-color: brown;
+        } */
+
+        /* .box::first-letter{
+            color: blue;
+            font-size: large;
+        } */
+
+        /* Universal Class Selector. */
+        .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
+
+        /* Attributable selector. */
+        /* [data-color="primary"]{
+            margin-top: 35px;
+            padding: 10px;
+        } */
+
+        /* We can also group different selectors. */
+        /* p,a,.box,[data-color="primary"]{
+            margin-top: 35px;
+            padding: 10px;
+        } */
+
+        /* nth child selector value can be even, odd or no. */
+        /* .box:nth-child(odd){
+            background-color: red;
+
+        }
+
+        .box:nth-last-child(1){
+            background-color: yellow;
+        } */
+
+        /* To insert element dynamically using CSS? #we use Pseudo. elements */
+        /* To add something before and after the container ex. div */
+        .boxes::before{
+            content: "Welcome to know more about CSS Selector ";
+        }
+
+        .boxes::after{
+            content: "Thanks for visiting ";
+            color: green;
+        }
+
+        /* Applicable on selected elementa or parts on the page */
+        ::selection{
+            color: darkorange;
+            background-color: black;
+        }
+        /* To style the input tag */
+        ::placeholder{
+            color:gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">I am Hitoshi Barrakuda </div>
+        <div class="box">I am second box</div>
+        <div class="box">I am third box</div>
+        <input type="text" placeholder="Enter your name">
+    </div>
+</body>
+</html>
