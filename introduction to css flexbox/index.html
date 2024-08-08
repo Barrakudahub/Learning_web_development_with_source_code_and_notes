@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        /* Most of the flex property are applied to the container */
+        .container{
+            width: 100%;
+            height: 80vh;
+            border: 2px solid gold;
+            /*Learning flex property */
+            display: flex;
+            /* Justify content first check the main axis and then adjust the elements  */
+            justify-content: center;
+            /* Align item is used when we only have a single line. */
+            /* align-items: center; */
+            /* Generally, the flex direction is from left to right in terms of row on the bais of main axis*/
+            /* flex-direction: column-reverse; */
+            /* Wrap the overflow content */
+            /* flex-wrap: wrap; */
+            /* Align content is used when we have more than one line. */
+            /* align-content: center; */
+            /* flex-flow: row wrap; */
+            /* To give gap within the elements and it can be applicable either on row or colom or both  */
+            /* row-gap: 50px;
+            column-gap: 10px; */
+            gap: 50px 10px;
+        }
+
+        .items{
+            height: 56px;
+            width: 56px;
+            background-color: chartreuse;
+            border: 2px solid black;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* The order property is applied to items, range form (0-n) */
+        /* Lesser the number higher the priority. */
+        /* Default order zero. */
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+        .item1{
+            /* flex-grow: 3; */
+            flex-shrink: 2;
+            /* Align the particular element. */
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+     <!-- Syntax for creating (multiple or n )containers, -->
+     <!-- div.container>.items*n  -->
+   <div class="container">
+    <div class="items item1">1</div>
+    <div class="items">2</div>
+    <div class="items">3</div>
+    <div class="items">4</div>
+    <div class="items order-1">5</div>
+    <div class="items">6</div>
+    <div class="items order-2">7</div>
+    <div class="items">8</div>
+    <div class="items order-3">9</div>
+    <div class="items">10</div>
+   </div>
+
+ 
+</body>
+</html>
