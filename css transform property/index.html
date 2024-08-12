@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            border: 2px solid olivedrab;
+            height: 50vh;
+            width: 90%;
+            /* padding: 10px; */
+            margin: 40px 60px;
+        }
+
+        .box{
+            border: 2px double black;
+            height: 80px;
+            width: 80px;
+            background-color: bisque;
+            /* CSS transform properties */
+            /* We can transform the degree along axis and in 3d plane*/
+            transform: rotate(40deg);
+            /* We can rotate it along each axis */
+            /* transform: rotateX(45deg); */
+            /* transform: rotateY(60deg); */
+            /* transform: rotateZ(90deg); */
+            /* In turn 360deg=1turn */
+            transform: rotate(0.5turn);
+            /* Using scale we can increase size and it can be applied to individual axis & in 3d also*/
+            /* transform: scale(1.5); */
+            /* Skew tilt the opposite edges and can also be applied along X & Y axis*/
+            /* not in z axis */
+            /* transform: skew(10deg); */
+            /* Help to move along axis X or Y or in 3d */
+            /* And percentage  means what % area covered by it then translate */
+            /* transform: translate(20px); */
+            /* If we want to apply more than one property then */
+            /* transform: translate(40%) skew(30deg) translateY(90%); */
+            /* And if we want to shift the origin. */
+            /* transform: rotate(50deg); */
+            /* transform-origin: 0%  0%; */
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">BOX</div>
+    </div>
+</body>
+</html>
