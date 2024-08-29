@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            margin: auto;
+            border: 2px solid black;
+            width:70vw;
+            height: 50vh;
+            background-color: teal;
+
+        }
+        .box{
+            border: 2px solid black;
+            height: 60px;
+            width: 80px;
+            background-color: aliceblue;
+            animation-name: barrakudaAnimation;
+            animation-duration: 5s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 2;
+            animation-delay: 3s;
+            animation-direction: alternate-reverse;
+            /* To play or pause the animation. */
+            /* It get stopped wherever we paused. */
+            /* animation-play-state: paused; */
+            /* We can use all the property in one go */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: barrakudaAnimation 5s ease-out 3s 2 alternate-reverse fill-mode,
+                       barrakuda1Animation 4s ease-in 2s 3 reverse;
+                       /* Animation short-hand */
+        }              
+
+        @keyframes barrakudaAnimation{
+            from{
+                background-color: whitesmoke;
+            }
+            to{
+                transform: translateX(200px) skew(10deg);
+                background-color: tomato;
+                
+            }
+        }
+
+        /* We can apply it on time frame of animation by giving its percentage. */
+        @keyframes barrakuda1Animation{
+            0%{
+                transform: rotate(60deg);
+            }
+            90%{
+                transform: rotate(120deg);
+            }
+            180%{
+                transform: rotate(180deg);
+            }
+            270%{
+                transform: rotate(320deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
