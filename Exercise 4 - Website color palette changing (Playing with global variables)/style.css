@@ -1,0 +1,62 @@
+
+        /* To build an color changing nav bar using variables*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+
+        /* Declaration of global variables.*/
+:root {
+            --color: forestgreen;
+            --seccolor: rgb(190, 255, 190);
+            /* --defpad:34px; */
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .nav {
+            position: sticky;
+            margin: auto;
+            top: 0px;
+ height: 8vh;
+            width: 100vw;
+            background-color: var(--color, darkcyan);
+            align-content: center;
+            z-index: 1000;
+        }
+
+        .container {
+            display: flex;
+            margin: auto;
+            min-height: 144vh;
+            width: 100vw;
+            background-color: var(--seccolor, rgb(195, 255, 255));
+        }
+
+        img {
+            /* align-self: center; */
+            margin: 10px 10px 10px 10px;
+            height: 300px;
+            width: 450px;
+            border-radius: 6px;
+        }
+
+        p {
+            padding: 10px;
+            margin-top: 10px;
+            text-align: justify;
+        }
+
+        .footer {
+            margin: auto;
+            height: 8vh;
+            width: 100vw;
+            background-color: var(--color, darkcyan);
+        }
