@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object Fit and Position</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            height: 500px;
+            width: 600px;
+            /* background-color: teal; */
+            /* If the image size is smaller than the container by default,it will repeat. */
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJZtsLdmo8fah47WZiZbJjTUys5dW7hiVOQ&s);
+            /* We can also repeat it in a perticular directions. */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-clip:border-box;
+        }
+
+        img{
+            height: 350px;
+            width: 500px;
+            /* Object fit by default property is fill. */
+            object-fit: fill;
+            /* Objectfit covers the width and height given inside the image tag irrespective of the parent height or width */
+            /* object-fit: cover; */
+            /* The object fit contain enable the image without compromising on the aspect. ratio. */
+            /* object-fit: contain; */
+            /* object-fit: cover; */
+            /* Object position enable which part to show of the image */
+            object-position: bottom left;
+            object-position: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJZtsLdmo8fah47WZiZbJjTUys5dW7hiVOQ&s" alt="quote"> -->
+        </div>
+    </div>
+</body>
+</html>
