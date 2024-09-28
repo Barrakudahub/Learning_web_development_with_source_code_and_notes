@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8.1 - Bouncing Ball</title>
+    <style>
+        .container {
+            width: 1400px;
+            height: 600px;
+            background-color: aqua;
+            outline: 2px dashed black;
+            outline-width: 5px;
+            position: relative;
+            overflow:hidden;
+        }
+
+        .ball {
+            width: 80px;
+            height: 80px;
+            background-color: red;
+            border-radius: 45px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: animationX 4s linear infinite, animationY 2s ease-out infinite alternate ;
+        }
+
+        @keyframes animationX{
+            from{
+                left: 0;
+            }
+            to{
+                left: 100%;
+            }
+        }
+
+        @keyframes animationY{
+            form{
+                bottom: 0;
+            }
+            to{
+                bottom: 100%;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
+
+Alternate way 
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8.2 - Bouncing Ball</title>
+    <style>
+        .container {
+            width: 900px;
+            height: 600px;
+            background-color: aqua;
+            outline: 2px dashed black;
+            outline-width: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ball {
+            width: 80px;
+            height: 80px;
+            background-color: red;
+            border-radius: 45px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                /* bottom represent y-axis */
+                bottom: 0;
+                /* left represent x-axis */
+                left: 0;
+            }
+            25% {
+                bottom: 400px;
+                left: 200px;
+            }
+            50% {
+                bottom: 0;
+                left: 400px;
+            }
+            75% {
+                bottom: 400px;
+                left: 200px;
+            }
+            100% {
+                bottom: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
+ -->
