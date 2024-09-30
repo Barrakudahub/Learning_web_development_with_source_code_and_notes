@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting & removing element using Js</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box" style="color:red">HEY THEIR THIS IS HITOSHI BARRAKUDA</div>
+        <div class="box">WELCOME TO MY WEB DEVELOPMENT COURSE</div>
+        <div class="box"></div>
+    </div>
+    <script>
+        let div = document.createElement("div");
+        div.innerHTML = "I have being inserted by <b> Hitoshi </b>"
+        div.setAttribute("class", "created");
+        // It node.append at the end of the node.
+        document.querySelector(".container").append(div);
+        // It append at the starting of the node
+        document.querySelector(".container").before(div);
+        // It append at the end of the node
+        document.querySelector(".container").after(div);
+
+        let cont = document.querySelector("container")
+        cont.insertAdjacentHTML("afterbegin", "<b> This is an ex. for afterbegin in this it append(applies) just at the starting of the selected query</b>")
+        cont.insertAdjacentHTML("beforebegin", "<b> This is an ex. for beforebegin in this it append(applies) just befor starting of the selected query</b>")
+    </script>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
